@@ -507,12 +507,13 @@ small{display:block}
 @media (max-width:860px){.services{padding:100px 0 80px}.svc-grid{grid-template-columns:1fr}}
 
 /* ---------- 오픈 이벤트 가 ---------- */
-s{color:#E05A5A;text-decoration:line-through;text-decoration-color:#E05A5A;text-decoration-thickness:2px;font-weight:600}
-.event-tag{display:inline-block;vertical-align:middle;margin-left:10px;background:#E05A5A;color:#fff;font-style:normal;font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:0}
+s{color:#E24B4B;text-decoration:line-through;text-decoration-color:#E24B4B;text-decoration-thickness:2.5px;font-weight:800;font-family:var(--fe);letter-spacing:-.02em}
+.event-tag{display:inline-block;vertical-align:middle;margin-left:10px;background:#E24B4B;color:#fff;font-style:normal;font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:0}
 .plan__price{flex-wrap:wrap;align-items:baseline;gap:0 8px}
-.plan__price s{font-family:var(--fe);font-size:18px;width:100%;margin-bottom:2px}
-.svc li b s{font-size:12px;margin-right:6px;font-weight:500}
-.opt span i s{font-size:11px;margin-right:4px;font-weight:500}
-.care__price s{font-size:14px;margin-right:6px}
-.addons td s{font-size:12px;margin-right:6px;font-weight:500}
-@media (max-width:860px){.event-tag{display:block;width:max-content;margin:10px 0 0}}
+.plan__price s{font-size:30px;width:100%;margin-bottom:4px}
+.svc li b{display:flex;align-items:baseline;gap:8px}
+.svc li b s{font-size:17px}
+.opt span i s{font-size:15px;margin-right:6px}
+.care__price s{font-size:22px;margin-right:8px}
+.addons td s{font-size:17px;margin-right:8px}
+@media (max-width:860px){.event-tag{display:block;width:max-content;margin:10px 0 0}.plan__price s{font-size:24px}.svc li b s{font-size:15px}}
