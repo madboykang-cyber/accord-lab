@@ -107,3 +107,32 @@
     reply(inp.value.trim()); inp.value = '';
   });
 })();
+
+/* 셀프 견적 계산기 + 패키지 버튼 + 무료 진단 */
+(() => {
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+  const form = $('#calcForm'), total = $('#calcTotal');
+  if (!form) return;
+  const picked = () => $$('input:checked', form);
+  const calc = () => {
+    const sum = picked().reduce((a, i) => a + Number(i.value), 0);
+    total.textContent = sum.toLocaleString();
+  };
+  form.addEventListener('change', calc); calc();
+
+  const memo = $('#memo'), contact = $('#contact');
+  $('#calcSend').addEventListener('click', () => {
+    const items = picked().map(i => i.dataset.label).join(', ');
+    memo.value = '[셀프 견적] ' + items + ' → 예상 ' + total.textContent + '만 원~';
+    contact.scrollIntoView({ behavior: 'smooth' });
+  });
+  $$('.plan .btn').forEach(b => b.addEventListener('click', () => {
+    memo.value = '[' + b.dataset.plan + ' 패키지] 문의드립니다.';
+  }));
+  $('#diagForm').addEventListener('submit', e => {
+    e.preventDefault();
+    alert('무료 진단 신청이 접수되었습니다. 48시간 안에 리포트를 보내드리겠습니다.');
+    e.target.reset();
+  });
+})();
