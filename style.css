@@ -296,7 +296,9 @@ small{display:block}
 .quickbar{position:fixed;left:0;right:0;bottom:0;z-index:48;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line);box-shadow:0 -10px 40px -20px rgba(43,42,74,.3);transform:translateY(100%);transition:transform .5s var(--ease)}
 .quickbar.is-on{transform:none}
 .quickbar__inner{width:min(1360px,94%);margin:0 auto;display:flex;align-items:center;gap:24px;padding:14px 0}
-.quickbar__brand{display:flex;align-items:center;gap:12px;font-size:13px;line-height:1.4}
+.quickbar__brand{display:flex;align-items:center;gap:12px;font-size:13px;line-height:1.45;white-space:nowrap;flex-shrink:0}
+.quickbar__brand .logo__mark{flex-shrink:0}
+.quickbar__brand b{font-size:14px}
 .quickbar__tel{white-space:nowrap;font-family:var(--fe);font-weight:800;font-size:26px;color:var(--p-deep);letter-spacing:-.02em}
 .quickbar__form{display:flex;align-items:center;gap:8px;margin-left:auto}
 .quickbar__form input,.quickbar__form select{height:42px;border:1px solid var(--line);border-radius:8px;padding:0 14px;font-size:14px;background:#fff;min-width:130px}
