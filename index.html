@@ -10,6 +10,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/logo-256.png">
+<meta property="og:title" content="시냅스 랩 | 브랜드 홈페이지 제작">
+<meta property="og:description" content="기획·디자인·개발 100% 인하우스. 브랜드의 관점에서 웹을 만듭니다.">
+<meta property="og:image" content="assets/logo.jpg">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,17 +23,11 @@
 <header class="header" id="header">
   <div class="header__inner">
     <a href="#top" class="logo" aria-label="시냅스 랩">
-      <span class="logo__mark">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="20" r="5" fill="#fff"/>
-          <circle cx="32" cy="8" r="4" fill="#fff"/>
-          <circle cx="32" cy="32" r="4" fill="#fff"/>
-          <path d="M12 18L28 9M12 22L28 31" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </span>
-      <span class="logo__text"><small>SYNAPSE</small>LAB</span>
+      <img class="logo__img" src="assets/logo-256.png" alt="시냅스 랩 로고">
+      <span class="logo__text"><small>SYNAPSE LAB</small>시냅스 랩</span>
     </a>
     <nav class="nav">
+      <a href="#services">서비스</a>
       <a href="#fields">제작 분야</a>
       <a href="#why">우리가 다른 이유</a>
       <a href="#pricing">요금 안내</a>
@@ -43,6 +42,7 @@
 </header>
 
 <div class="mobile-nav" id="mobileNav">
+  <a href="#services">서비스</a>
   <a href="#fields">제작 분야</a>
   <a href="#why">우리가 다른 이유</a>
   <a href="#pricing">요금 안내</a>
@@ -80,6 +80,7 @@
       <div class="stat"><em>클라이언트</em><strong><span class="count" data-to="180">0</span>+</strong></div>
     </div>
 
+    <div class="hero__logo"><img src="assets/logo.jpg" alt="시냅스 랩"></div>
     <div class="hero__badge">The Web Standard.<br>Synapse Lab</div>
     <div class="scroll-cue"><span></span>SCROLL</div>
   </div>
@@ -90,6 +91,68 @@
       <span>제조·유통</span><span>F&amp;B</span><span>의료·병원</span><span>교육·학원</span><span>프랜차이즈</span><span>IT·스타트업</span><span>공공·기관</span><span>뷰티·패션</span><span>건설·인테리어</span><span>법률·세무</span>
       <span>제조·유통</span><span>F&amp;B</span><span>의료·병원</span><span>교육·학원</span><span>프랜차이즈</span><span>IT·스타트업</span><span>공공·기관</span><span>뷰티·패션</span><span>건설·인테리어</span><span>법률·세무</span>
     </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES (서비스 메뉴) ===== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="sec-head reveal">
+      <small>SERVICE MENU</small>
+      <h2>홈페이지부터 영상까지,<br>한 팀에서 끝냅니다 <em class="event-tag">오픈 이벤트 50%</em></h2>
+      <p>따로따로 맡기면 톤이 깨집니다.<br>웹·디자인·영상을 같은 브랜드 결로 만듭니다.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="svc__icon svc__icon--web"></div>
+        <small>WEBSITE</small>
+        <h3>홈페이지 제작</h3>
+        <p>기업·병원·학원·쇼핑몰. 기획부터 개발, 24개월 AS까지.</p>
+        <ul><li>스타터 <b><s>99</s>49만 원~</b></li><li>비즈니스 <b><s>290</s>145만 원~</b></li><li>프리미엄 <b><s>590</s>295만 원~</b></li></ul>
+        <a href="#pricing" class="svc__link">패키지 보기 →</a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc__icon svc__icon--landing"></div>
+        <small>LANDING</small>
+        <h3>랜딩페이지 제작</h3>
+        <p>광고·이벤트·신청용 원페이지. 폼과 전환 추적까지 세팅.</p>
+        <ul><li>기본형 <b><s>60</s>30만 원~</b></li><li>고전환형(A/B 2안) <b><s>110</s>55만 원~</b></li><li>광고 소재 세트 추가 <b>+<s>20</s>10만 원</b></li></ul>
+        <a href="#contact" class="svc__link" data-svc="랜딩페이지 제작">문의하기 →</a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc__icon svc__icon--card"></div>
+        <small>CARD NEWS</small>
+        <h3>카드뉴스 제작</h3>
+        <p>인스타·블로그·네이버용. 브랜드 템플릿을 만들어 매달 이어갑니다.</p>
+        <ul><li>1세트(6~8장) <b><s>8</s>4만 원~</b></li><li>월 4세트 구독 <b><s>25</s>12.5만 원</b></li><li>브랜드 템플릿 제작 <b><s>15</s>7.5만 원</b></li></ul>
+        <a href="#contact" class="svc__link" data-svc="카드뉴스 제작">문의하기 →</a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc__icon svc__icon--poster"></div>
+        <small>POSTER</small>
+        <h3>포스터·배너 디자인</h3>
+        <p>행사 포스터, 현수막, 메뉴판, 전단. 인쇄 파일까지 넘깁니다.</p>
+        <ul><li>포스터 1종 <b><s>10</s>5만 원~</b></li><li>현수막·배너 1종 <b><s>7</s>3.5만 원~</b></li><li>메뉴판·전단 <b><s>12</s>6만 원~</b></li></ul>
+        <a href="#contact" class="svc__link" data-svc="포스터·배너 디자인">문의하기 →</a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc__icon svc__icon--video"></div>
+        <small>VIDEO EDIT</small>
+        <h3>영상 편집</h3>
+        <p>자막·효과음·모션 그래픽·BGM. 유튜브·릴스·광고 영상 편집.</p>
+        <ul><li>쇼츠·릴스 1편 <b><s>5</s>2.5만 원~</b></li><li>롱폼 10분 내외 <b><s>15</s>7.5만 원~</b></li><li>월 10편 쇼츠 구독 <b><s>35</s>17.5만 원</b></li></ul>
+        <a href="#contact" class="svc__link" data-svc="영상 편집">문의하기 →</a>
+      </article>
+      <article class="svc reveal">
+        <div class="svc__icon svc__icon--cut"></div>
+        <small>CUT EDIT</small>
+        <h3>컷편집</h3>
+        <p>무음·헛말·중복 테이크 제거, 템포 정리. 긴 원본을 보는 길이로.</p>
+        <ul><li>쇼츠 컷편집 1편 <b><s>2</s>1만 원~</b></li><li>롱폼 30분 원본 <b><s>8</s>4만 원~</b></li><li>컷편집+자막 세트 <b>+<s>3</s>1.5만 원</b></li></ul>
+        <a href="#contact" class="svc__link" data-svc="컷편집">문의하기 →</a>
+      </article>
+    </div>
+    <p class="pricing__note reveal">오픈 이벤트 가(정가의 50%), 부가세 별도. 수정 2회 포함, 사진·영상 원본은 고객 제공 기준. 묶음 의뢰는 추가 10% 할인.</p>
   </div>
 </section>
 
@@ -166,8 +229,8 @@
         <div class="field-panel__visual fp-food"><span>F&amp;B</span></div>
         <div class="field-panel__body">
           <h3>요식업</h3>
-          <p>메뉴 사진이 전부입니다. 촬영부터 함께하고, 예약·주문·매장 정보가 세 번 터치 안에 끝나게 만듭니다.</p>
-          <ul><li>메뉴·사진 촬영 포함</li><li>예약·배달앱 연동</li><li>매장 정보·지도</li><li>SNS 피드 연동</li></ul>
+          <p>메뉴 사진이 전부입니다. 보내주신 사진을 보정해 살리고, 예약·주문·매장 정보가 세 번 터치 안에 끝나게 만듭니다.</p>
+          <ul><li>제공 사진 보정·메뉴 구성</li><li>예약·배달앱 연동</li><li>매장 정보·지도</li><li>SNS 피드 연동</li></ul>
         </div>
       </article>
       <article class="field-panel" data-panel="7">
@@ -213,7 +276,7 @@
         <span class="why-card__num">01</span>
         <div class="why-card__icon ic-brand"></div>
         <h3>브랜딩을 아는 웹팀</h3>
-        <p>브랜딩·마케팅·촬영 경험을<br>바탕으로 브랜드 특화 웹사이트를 만듭니다.</p>
+        <p>브랜딩·마케팅·콘텐츠 경험을<br>바탕으로 브랜드 특화 웹사이트를 만듭니다.</p>
         <em>Branding-Aware Web Team</em>
       </article>
       <article class="why-card reveal">
@@ -234,7 +297,7 @@
         <span class="why-card__num">04</span>
         <div class="why-card__icon ic-team"></div>
         <h3>우리는 원팀, 콘텐츠까지 한 번에</h3>
-        <p>사진과 영상 촬영까지 웹사이트에<br>필요한 콘텐츠를 함께 제작합니다.</p>
+        <p>카드뉴스·포스터·영상 편집까지<br>웹사이트에 필요한 콘텐츠를 함께 만듭니다.</p>
         <em>One Team, All in One</em>
       </article>
     </div>
@@ -246,15 +309,15 @@
   <div class="container">
     <div class="sec-head reveal">
       <small>PRICING</small>
-      <h2>제작 패키지</h2>
-      <p>숨은 비용 없이 패키지 금액 그대로.<br>모든 패키지에 반응형·기본 SEO·24개월 AS가 포함됩니다.</p>
+      <h2>제작 패키지 <em class="event-tag">오픈 이벤트 50%</em></h2>
+      <p>오픈 기념, 모든 패키지 정가의 50%. 숨은 비용 없이 이벤트 금액 그대로.<br>모든 패키지에 반응형·기본 SEO·24개월 AS가 포함됩니다.</p>
     </div>
     <div class="plans">
       <article class="plan reveal">
         <small>STARTER</small>
         <h3>스타터</h3>
         <p class="plan__for">1인 사업자·소규모 매장·명함 대신 쓰는 홈페이지</p>
-        <div class="plan__price"><b>99</b><span>만 원~</span></div>
+        <div class="plan__price"><s>99만 원</s><b>49</b><span>만 원~</span></div>
         <ul>
           <li>원페이지 랜딩 또는 5페이지 이내</li><li>반응형(모바일·PC)</li><li>기본 SEO·네이버 서치어드바이저 등록</li><li>문의 폼·카카오톡 연결</li><li>도메인·호스팅 세팅 대행</li><li>제작 기간 2~3주</li>
         </ul>
@@ -265,9 +328,9 @@
         <small>BUSINESS</small>
         <h3>비즈니스</h3>
         <p class="plan__for">기업·병원·학원·프랜차이즈 공식 홈페이지</p>
-        <div class="plan__price"><b>290</b><span>만 원~</span></div>
+        <div class="plan__price"><s>290만 원</s><b>145</b><span>만 원~</span></div>
         <ul>
-          <li>10~15페이지 맞춤 디자인</li><li>관리자 페이지(공지·게시판·갤러리)</li><li>예약·상담 신청 시스템</li><li>구글 애널리틱스·픽셀 세팅</li><li>사진 촬영 반나절 포함</li><li>제작 기간 4~6주</li>
+          <li>10~15페이지 맞춤 디자인</li><li>관리자 페이지(공지·게시판·갤러리)</li><li>예약·상담 신청 시스템</li><li>구글 애널리틱스·픽셀 세팅</li><li>제공 사진 보정·최적화</li><li>제작 기간 3~5주</li>
         </ul>
         <a href="#contact" class="btn btn--primary btn--full" data-plan="비즈니스">비즈니스로 문의</a>
       </article>
@@ -275,14 +338,14 @@
         <small>PREMIUM</small>
         <h3>프리미엄</h3>
         <p class="plan__for">쇼핑몰·플랫폼·브랜딩까지 한 번에</p>
-        <div class="plan__price"><b>590</b><span>만 원~</span></div>
+        <div class="plan__price"><s>590만 원</s><b>295</b><span>만 원~</span></div>
         <ul>
-          <li>페이지 무제한·인터랙션 디자인</li><li>쇼핑몰(결제·배송·PG) 또는 회원제</li><li>브랜딩·로고 리뉴얼 포함</li><li>사진·영상 촬영 1일 포함</li><li>오픈 후 3개월 마케팅 세팅</li><li>제작 기간 8~12주</li>
+          <li>페이지 무제한·인터랙션 디자인</li><li>쇼핑몰(결제·배송·PG) 또는 회원제</li><li>브랜딩·로고 리뉴얼 포함</li><li>소개 영상 편집 1편 포함</li><li>오픈 후 3개월 검색 노출 세팅</li><li>제작 기간 8~12주</li>
         </ul>
         <a href="#contact" class="btn btn--ghost btn--full" data-plan="프리미엄">프리미엄으로 문의</a>
       </article>
     </div>
-    <p class="pricing__note reveal">부가세 별도. 금액은 페이지 수와 기능에 따라 달라지며 상담 후 확정 견적서를 드립니다.</p>
+    <p class="pricing__note reveal">오픈 이벤트 가는 선착순 10팀 한정, 부가세 별도. 금액은 페이지 수와 기능에 따라 달라지며 상담 후 확정 견적서를 드립니다. 사진·원고는 고객 제공 기준입니다.</p>
   </div>
 </section>
 
@@ -331,32 +394,32 @@
       <p>필요한 항목만 고르면 예상 금액이 바로 나옵니다.<br>결과를 그대로 문의 폼에 담아 보낼 수 있습니다.</p>
       <div class="calc__result">
         <span>예상 제작비</span>
-        <strong><b id="calcTotal">99</b>만 원~</strong>
-        <small>부가세 별도 · 상담 후 확정</small>
+        <strong><b id="calcTotal">49</b>만 원~</strong>
+        <small>오픈 이벤트 가 적용 · 부가세 별도 · 상담 후 확정</small>
         <button type="button" class="btn btn--primary" id="calcSend">이 견적으로 문의하기</button>
       </div>
     </div>
     <form class="calc__form reveal" id="calcForm">
       <fieldset>
         <legend>홈페이지 유형</legend>
-        <label class="opt"><input type="radio" name="type" value="99" data-label="원페이지 랜딩" checked><span>원페이지 랜딩<i>99만 원</i></span></label>
-        <label class="opt"><input type="radio" name="type" value="190" data-label="기본형(5p)"><span>기본형 5페이지<i>190만 원</i></span></label>
-        <label class="opt"><input type="radio" name="type" value="290" data-label="기업형(10~15p)"><span>기업형 10~15페이지<i>290만 원</i></span></label>
-        <label class="opt"><input type="radio" name="type" value="490" data-label="쇼핑몰"><span>쇼핑몰<i>490만 원</i></span></label>
+        <label class="opt"><input type="radio" name="type" value="49" data-label="원페이지 랜딩" checked><span>원페이지 랜딩<i><s>99</s>49만 원</i></span></label>
+        <label class="opt"><input type="radio" name="type" value="95" data-label="기본형(5p)"><span>기본형 5페이지<i><s>190</s>95만 원</i></span></label>
+        <label class="opt"><input type="radio" name="type" value="145" data-label="기업형(10~15p)"><span>기업형 10~15페이지<i><s>290</s>145만 원</i></span></label>
+        <label class="opt"><input type="radio" name="type" value="245" data-label="쇼핑몰"><span>쇼핑몰<i><s>490</s>245만 원</i></span></label>
       </fieldset>
       <fieldset>
         <legend>추가 기능</legend>
-        <label class="opt"><input type="checkbox" name="add" value="40" data-label="관리자 페이지"><span>관리자 페이지(게시판·공지)<i>+40</i></span></label>
-        <label class="opt"><input type="checkbox" name="add" value="60" data-label="예약·상담 시스템"><span>온라인 예약·상담 시스템<i>+60</i></span></label>
-        <label class="opt"><input type="checkbox" name="add" value="50" data-label="회원가입·로그인"><span>회원가입·로그인<i>+50</i></span></label>
-        <label class="opt"><input type="checkbox" name="add" value="30" data-label="다국어"><span>다국어(영문 1개 언어)<i>+30</i></span></label>
+        <label class="opt"><input type="checkbox" name="add" value="20" data-label="관리자 페이지"><span>관리자 페이지(게시판·공지)<i><s>+40</s>+20None</i></span></label>
+        <label class="opt"><input type="checkbox" name="add" value="30" data-label="예약·상담 시스템"><span>온라인 예약·상담 시스템<i><s>+60</s>+30None</i></span></label>
+        <label class="opt"><input type="checkbox" name="add" value="25" data-label="회원가입·로그인"><span>회원가입·로그인<i><s>+50</s>+25None</i></span></label>
+        <label class="opt"><input type="checkbox" name="add" value="15" data-label="다국어"><span>다국어(영문 1개 언어)<i><s>+30</s>+15None</i></span></label>
       </fieldset>
       <fieldset>
         <legend>콘텐츠 제작</legend>
-        <label class="opt"><input type="checkbox" name="add" value="35" data-label="사진 촬영"><span>사진 촬영 반나절<i>+35</i></span></label>
-        <label class="opt"><input type="checkbox" name="add" value="80" data-label="영상 제작"><span>소개 영상 1편<i>+80</i></span></label>
-        <label class="opt"><input type="checkbox" name="add" value="45" data-label="로고 제작"><span>로고·CI 제작<i>+45</i></span></label>
-        <label class="opt"><input type="checkbox" name="add" value="25" data-label="원고 작성"><span>원고 작성 대행<i>+25</i></span></label>
+        <label class="opt"><input type="checkbox" name="add" value="5" data-label="사진 보정"><span>제공 사진 보정 30컷<i><s>+10</s>+5None</i></span></label>
+        <label class="opt"><input type="checkbox" name="add" value="20" data-label="영상 편집"><span>소개 영상 편집 1편<i><s>+40</s>+20None</i></span></label>
+        <label class="opt"><input type="checkbox" name="add" value="22.5" data-label="로고 제작"><span>로고·CI 제작<i><s>+45</s>+22.5None</i></span></label>
+        <label class="opt"><input type="checkbox" name="add" value="12.5" data-label="원고 작성"><span>원고 작성 대행<i><s>+25</s>+12.5None</i></span></label>
       </fieldset>
     </form>
   </div>
@@ -367,37 +430,36 @@
   <div class="container">
     <div class="sec-head reveal">
       <small>MONTHLY CARE</small>
-      <h2>유지보수·관리 구독</h2>
+      <h2>유지보수·관리 구독 <em class="event-tag">첫 6개월 50%</em></h2>
       <p>만들고 끝이 아니라, 매달 살아 있는 홈페이지로.<br>오픈 후 24개월 무상 AS와 별개로 운영을 대신합니다.</p>
     </div>
     <div class="cares">
       <article class="care-card reveal">
         <h3>베이직</h3>
-        <div class="care__price"><b>5</b>만 원<span>/월</span></div>
+        <div class="care__price"><s>5만 원</s><b>2.5</b>만 원<span>/월</span></div>
         <ul><li>호스팅·도메인·SSL 관리</li><li>월 1회 백업·보안 점검</li><li>텍스트·이미지 교체 월 3건</li></ul>
       </article>
       <article class="care-card care-card--hot reveal">
         <h3>스탠다드</h3>
-        <div class="care__price"><b>15</b>만 원<span>/월</span></div>
+        <div class="care__price"><s>15만 원</s><b>7.5</b>만 원<span>/월</span></div>
         <ul><li>베이직 전체 포함</li><li>교체·수정 월 10건</li><li>블로그·공지 콘텐츠 월 2편 작성</li><li>월간 방문 리포트</li></ul>
       </article>
       <article class="care-card reveal">
         <h3>프로</h3>
-        <div class="care__price"><b>39</b>만 원<span>/월</span></div>
+        <div class="care__price"><s>39만 원</s><b>19.5</b>만 원<span>/월</span></div>
         <ul><li>스탠다드 전체 포함</li><li>네이버·구글 검색 최적화 운영</li><li>랜딩페이지 월 1개 추가 제작</li><li>광고 소재·SNS 콘텐츠 월 4건</li></ul>
       </article>
     </div>
 
     <div class="addons reveal">
-      <h3>추가 서비스 단가</h3>
+      <h3>추가 서비스 단가 <em class="event-tag">오픈 이벤트 50%</em></h3>
       <table>
         <tr><th>항목</th><th>내용</th><th>금액</th></tr>
-        <tr><td>랜딩페이지 단품</td><td>광고용 원페이지, 폼·추적 세팅 포함</td><td>60만 원~</td></tr>
-        <tr><td>상세페이지</td><td>스마트스토어·쿠팡용 제품 상세 1종</td><td>35만 원~</td></tr>
-        <tr><td>로고·CI</td><td>시안 3종, 원본 파일 전체</td><td>45만 원~</td></tr>
-        <tr><td>사진 촬영</td><td>반나절, 보정본 30컷</td><td>35만 원~</td></tr>
-        <tr><td>소개 영상</td><td>60초 내외, 자막·BGM 포함</td><td>80만 원~</td></tr>
-        <tr><td>네이버 플레이스·지도 세팅</td><td>등록·사진·메뉴·키워드 정리</td><td>15만 원</td></tr>
+        <tr><td>랜딩페이지 단품</td><td>광고용 원페이지, 폼·추적 세팅 포함</td><td><s>60만 원</s>30만 원~</td></tr>
+        <tr><td>상세페이지</td><td>스마트스토어·쿠팡용 제품 상세 1종</td><td><s>35만 원</s>17.5만 원~</td></tr>
+        <tr><td>로고·CI</td><td>시안 3종, 원본 파일 전체</td><td><s>45만 원</s>22.5만 원~</td></tr>
+                <tr><td>소개 영상 편집</td><td>제공 영상 기반 60초 내외, 자막·BGM 포함</td><td><s>40만 원</s>20만 원~</td></tr>
+        <tr><td>네이버 플레이스·지도 세팅</td><td>등록·사진·메뉴·키워드 정리</td><td><s>15만 원</s>7.5만 원</td></tr>
         <tr><td>홈페이지 리뉴얼 진단</td><td>현재 사이트 문제점 리포트 + 개선안</td><td><em>무료</em></td></tr>
       </table>
     </div>
@@ -421,8 +483,8 @@
 <section class="lab" id="lab">
   <div class="container lab__inner">
     <div class="floors reveal">
-      <div class="floor" data-f="6"><b>6F</b><span>Roof top</span><small>브랜드 워크숍·촬영 테라스</small></div>
-      <div class="floor" data-f="5"><b>5F</b><span>Photo / Studio</span><small>제품·인물·공간 촬영</small></div>
+      <div class="floor" data-f="6"><b>6F</b><span>Roof top</span><small>브랜드 워크숍·아이디어 회의</small></div>
+      <div class="floor" data-f="5"><b>5F</b><span>Content / Edit</span><small>카드뉴스·포스터·영상 편집</small></div>
       <div class="floor" data-f="4"><b>4F</b><span>Marketing</span><small>검색·광고·콘텐츠 운영</small></div>
       <div class="floor is-on" data-f="3"><b>3F</b><span>WEB / DEV</span><small>기획·디자인·개발 랩</small></div>
       <div class="floor" data-f="2"><b>2F</b><span>Branding</span><small>로고·CI·네이밍</small></div>
@@ -446,14 +508,14 @@
   </div>
   <div class="marquee marquee--roles">
     <div class="marquee__track">
-      <span>BRANDING</span><span>DESIGN</span><span>DEVELOPERS</span><span>PRODUCER</span><span>MARKETING</span><span>PHOTO</span>
-      <span>BRANDING</span><span>DESIGN</span><span>DEVELOPERS</span><span>PRODUCER</span><span>MARKETING</span><span>PHOTO</span>
+      <span>BRANDING</span><span>DESIGN</span><span>DEVELOPERS</span><span>PRODUCER</span><span>MARKETING</span><span>CONTENT</span>
+      <span>BRANDING</span><span>DESIGN</span><span>DEVELOPERS</span><span>PRODUCER</span><span>MARKETING</span><span>CONTENT</span>
     </div>
   </div>
   <div class="marquee marquee--jobs" dir="rtl">
     <div class="marquee__track">
-      <span>브랜드 개발 및 기획</span><span>웹 및 어플리케이션 개발</span><span>웹 디자인</span><span>브랜딩/로고/캐릭터 디자인</span><span>기획 PD</span><span>퍼포먼스 마케팅</span><span>사진·영상 촬영</span>
-      <span>브랜드 개발 및 기획</span><span>웹 및 어플리케이션 개발</span><span>웹 디자인</span><span>브랜딩/로고/캐릭터 디자인</span><span>기획 PD</span><span>퍼포먼스 마케팅</span><span>사진·영상 촬영</span>
+      <span>브랜드 개발 및 기획</span><span>웹 및 어플리케이션 개발</span><span>웹 디자인</span><span>브랜딩/로고/캐릭터 디자인</span><span>기획 PD</span><span>퍼포먼스 마케팅</span><span>영상 편집·모션 그래픽</span>
+      <span>브랜드 개발 및 기획</span><span>웹 및 어플리케이션 개발</span><span>웹 디자인</span><span>브랜딩/로고/캐릭터 디자인</span><span>기획 PD</span><span>퍼포먼스 마케팅</span><span>영상 편집·모션 그래픽</span>
     </div>
   </div>
   <div class="team__crew">
@@ -476,11 +538,11 @@
       </details>
       <details>
         <summary>제작 비용은 어떻게 산정되나요?</summary>
-        <div>페이지 수, 기능(예약·결제·게시판 등), 촬영 포함 여부로 산정합니다. 문의 폼에 예상 범위를 적어주시면 그 범위 안에서 가능한 구성을 제안합니다.</div>
+        <div>페이지 수, 기능(예약·결제·게시판 등), 콘텐츠 제작 범위로 산정합니다. 문의 폼에 예상 범위를 적어주시면 그 범위 안에서 가능한 구성을 제안합니다.</div>
       </details>
       <details>
         <summary>원고와 사진이 없어도 되나요?</summary>
-        <div>됩니다. 기획 단계에서 인터뷰로 원고를 함께 쓰고, 사진·영상은 자체 스튜디오에서 촬영합니다.</div>
+        <div>됩니다. 기획 단계에서 인터뷰로 원고를 함께 쓰고, 사진은 보내주시면 보정해서 씁니다. 사진이 전혀 없으면 저작권 걱정 없는 스톡 이미지로 구성합니다.</div>
       </details>
       <details>
         <summary>오픈 후 수정과 유지보수는요?</summary>
@@ -541,8 +603,8 @@
           <label><input type="checkbox" name="extra" value="인큐베이팅"><span>인큐베이팅</span></label>
           <label><input type="checkbox" name="extra" value="마케팅"><span>마케팅</span></label>
           <label><input type="checkbox" name="extra" value="상표 등록"><span>상표 등록ㆍ정보공개서</span></label>
-          <label><input type="checkbox" name="extra" value="사진 촬영"><span>사진 촬영</span></label>
-          <label><input type="checkbox" name="extra" value="영상 제작"><span>영상 제작</span></label>
+          <label><input type="checkbox" name="extra" value="카드뉴스"><span>카드뉴스</span></label>
+          <label><input type="checkbox" name="extra" value="영상 편집"><span>영상 편집</span></label>
           <label><input type="checkbox" name="extra" value="프랜차이즈 상담"><span>프랜차이즈 상담</span></label>
         </div>
         <textarea name="memo" id="memo" rows="4" placeholder="참고 사이트, 원하는 분위기, 꼭 필요한 기능을 자유롭게 적어주세요."></textarea>
@@ -564,7 +626,8 @@
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <span class="logo__text"><small>SYNAPSE</small>LAB</span>
+      <img class="footer__logo" src="assets/logo-256.png" alt="시냅스 랩 로고">
+      <span class="logo__text"><small>SYNAPSE LAB</small>시냅스 랩</span>
       <a href="#" class="footer__policy">개인정보처리방침</a>
     </div>
     <div class="footer__info">
@@ -574,7 +637,7 @@
     </div>
     <div class="footer__family">
       <b>FAMILY SITE</b>
-      <a href="#">시냅스 브랜딩</a><i>|</i><a href="#">시냅스 스튜디오</a><i>|</i><a href="#">시냅스 마케팅</a>
+      <a href="#">시냅스 브랜딩</a><i>|</i><a href="#">시냅스 에디트</a><i>|</i><a href="#">시냅스 마케팅</a>
     </div>
   </div>
 </footer>
@@ -582,7 +645,7 @@
 <!-- ===== 하단 고정 빠른 문의 ===== -->
 <div class="quickbar" id="quickbar">
   <div class="quickbar__inner">
-    <div class="quickbar__brand"><span class="logo__mark logo__mark--sm"></span><p>브랜드 홈페이지 제작<br><b>시냅스 랩</b> 대표 강승현</p></div>
+    <div class="quickbar__brand"><img class="quickbar__logo" src="assets/logo-256.png" alt=""><p>브랜드 홈페이지 제작<br><b>시냅스 랩</b> 대표 강승현</p></div>
     <a href="tel:01092867134" class="quickbar__tel">010-9286-7134</a>
     <form class="quickbar__form" id="qform">
       <input type="text" name="name" placeholder="성함" required>
@@ -598,7 +661,7 @@
 <!-- ===== AI 상담 위젯 ===== -->
 <div class="chat" id="chat">
   <button class="chat__fab" id="chatFab" aria-label="상담 열기">
-    <span class="chat__avatar"></span>
+    <img class="chat__avatar" src="assets/logo-256.png" alt="">
     <span class="chat__hint">상담사 S에게<br>문의해보세요</span>
   </button>
   <div class="chat__box" id="chatBox">

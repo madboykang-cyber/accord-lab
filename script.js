@@ -136,3 +136,8 @@
     e.target.reset();
   });
 })();
+
+/* 서비스 카드 문의 버튼 → 문의 폼 메모 자동 입력 */
+document.querySelectorAll('.svc__link[data-svc]').forEach(a => a.addEventListener('click', () => {
+  const m = document.getElementById('memo'); if (m) m.value = '[' + a.dataset.svc + '] 문의드립니다.';
+}));

@@ -463,3 +463,56 @@ small{display:block}
   .kakao{right:14px;bottom:152px;padding:8px}
   .kakao span{display:none}
 }
+
+/* ---------- logo image ---------- */
+.logo__img{width:46px;height:46px;border-radius:50%;object-fit:cover;box-shadow:0 6px 18px rgba(124,131,245,.3);background:#fff}
+.logo__text{font-family:var(--ff);font-weight:800;font-size:19px;letter-spacing:-.02em}
+.logo__text small{font-family:var(--fe);font-size:9px;font-weight:600;letter-spacing:.28em}
+.hero__logo{opacity:0;animation:bob 6s ease-in-out infinite,fadein 1.2s var(--ease) .6s forwards;position:absolute;right:0;top:150px;width:min(300px,24vw);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 40px 80px -30px rgba(124,131,245,.6),0 0 0 10px rgba(255,255,255,.5);}
+.hero__logo img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.footer__logo{width:72px;height:72px;border-radius:50%;object-fit:cover;background:#fff}
+.quickbar__logo{width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.chat__avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;background:#fff}
+.chat__avatar::after{display:none}
+@media (max-width:1100px){.hero__logo{top:120px;width:160px}}
+@media (max-width:860px){.hero__logo{position:static;width:140px;margin:0 auto 30px;order:-1}.hero__inner{padding-top:120px}}
+
+@keyframes fadein{to{opacity:1}}
+
+/* ---------- services (서비스 메뉴) ---------- */
+.services{padding:150px 0 100px;background:var(--cream)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px 30px;display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.svc__icon{width:56px;height:56px;border-radius:16px;margin-bottom:22px;position:relative}
+.svc__icon::after{content:"";position:absolute;inset:16px;border-radius:6px;background:rgba(255,255,255,.85)}
+.svc__icon--web{background:linear-gradient(135deg,#A9B4FF,#C9C4FF)}
+.svc__icon--landing{background:linear-gradient(135deg,#BFE3FF,#D4F3F0)}
+.svc__icon--card{background:linear-gradient(135deg,#FFD6EC,#E3DBFF)}
+.svc__icon--poster{background:linear-gradient(135deg,#FFE1D6,#FFF3C7)}
+.svc__icon--video{background:linear-gradient(135deg,#D4F3E8,#BFE3FF)}
+.svc__icon--video::after{inset:18px 16px;border-radius:50%}
+.svc__icon--cut{background:linear-gradient(135deg,#FFD9C9,#FFD0E8)}
+.svc__icon--cut::after{inset:26px 12px;border-radius:2px}
+.svc small{font-family:var(--fe);font-size:11px;letter-spacing:.2em;font-weight:600;color:var(--p-deep)}
+.svc h3{font-size:22px;font-weight:800;margin:6px 0 10px;letter-spacing:-.02em}
+.svc p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:18px}
+.svc ul{display:flex;flex-direction:column;gap:6px;margin-bottom:22px;flex:1}
+.svc li{display:flex;justify-content:space-between;font-size:14px;padding:8px 12px;background:var(--cream);border-radius:10px}
+.svc li b{font-family:var(--fe);font-weight:700;color:var(--ink)}
+.svc__link{font-weight:700;font-size:14px;color:var(--p-deep)}
+.svc__link:hover{text-decoration:underline}
+@media (max-width:1100px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){.services{padding:100px 0 80px}.svc-grid{grid-template-columns:1fr}}
+
+/* ---------- 오픈 이벤트 가 ---------- */
+s{color:#E05A5A;text-decoration:line-through;text-decoration-color:#E05A5A;text-decoration-thickness:2px;font-weight:600}
+.event-tag{display:inline-block;vertical-align:middle;margin-left:10px;background:#E05A5A;color:#fff;font-style:normal;font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:0}
+.plan__price{flex-wrap:wrap;align-items:baseline;gap:0 8px}
+.plan__price s{font-family:var(--fe);font-size:18px;width:100%;margin-bottom:2px}
+.svc li b s{font-size:12px;margin-right:6px;font-weight:500}
+.opt span i s{font-size:11px;margin-right:4px;font-weight:500}
+.care__price s{font-size:14px;margin-right:6px}
+.addons td s{font-size:12px;margin-right:6px;font-weight:500}
+@media (max-width:860px){.event-tag{display:block;width:max-content;margin:10px 0 0}}
