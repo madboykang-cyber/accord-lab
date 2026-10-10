@@ -5,3 +5,5 @@ form-receiver.gs
 마케팅실행가이드.md
 cardnews/
 make_cardnews.py
+poster/
+make_poster.py
