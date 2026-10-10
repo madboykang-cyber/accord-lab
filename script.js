@@ -1,6 +1,6 @@
 // 시냅스 랩 랜딩 페이지 인터랙션: 헤더·리빌·카운터·탭·폼·상담 위젯
 // 문의 수신 주소: form-receiver.gs 를 Apps Script 웹앱으로 배포한 뒤 그 URL 을 아래에 넣는다. 비어 있으면 알림창만 뜬다.
-const FORM_ENDPOINT = '';
+const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbygbGhdoOe00aZZCDmmIaSWKSTVaJGdADddKR-nQl7-An9D__LU6LUQIAVZ5HWdPOM/exec';
 async function sendLead(kind, fd) {
   const data = new URLSearchParams(); data.append('kind', kind);
   for (const [k, v] of fd.entries()) data.append(k, data.has(k) ? data.get(k) + ', ' + v : v);
