@@ -1,4 +1,13 @@
 // 시냅스 랩 랜딩 페이지 인터랙션: 헤더·리빌·카운터·탭·폼·상담 위젯
+// 문의 수신 주소: form-receiver.gs 를 Apps Script 웹앱으로 배포한 뒤 그 URL 을 아래에 넣는다. 비어 있으면 알림창만 뜬다.
+const FORM_ENDPOINT = '';
+async function sendLead(kind, fd) {
+  const data = new URLSearchParams(); data.append('kind', kind);
+  for (const [k, v] of fd.entries()) data.append(k, data.has(k) ? data.get(k) + ', ' + v : v);
+  if (!FORM_ENDPOINT) { console.log('문의(미전송)', Object.fromEntries(data)); return true; }
+  try { await fetch(FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: data }); return true; }
+  catch (e) { console.error(e); return false; }
+}
 (() => {
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -68,17 +77,19 @@
   cform.addEventListener('submit', e => {
     e.preventDefault();
     if (!$('[name=agree]', cform).checked) { alert('개인정보처리방침에 동의해 주세요.'); return; }
-    const fd = new FormData(cform);
-    console.log('문의 내용', Object.fromEntries(fd));
-    alert('문의가 접수되었습니다. 영업일 기준 1일 이내에 연락드리겠습니다.');
-    cform.reset(); goStep(1);
+    sendLead('제작 문의', new FormData(cform)).then(ok => {
+      alert(ok ? '문의가 접수되었습니다. 영업일 기준 1일 이내에 연락드리겠습니다.' : '전송에 실패했습니다. 전화나 카카오톡으로 문의해 주세요.');
+      if (ok) { cform.reset(); goStep(1); }
+    });
   });
 
   /* 퀵바 폼 */
   $('#qform').addEventListener('submit', e => {
     e.preventDefault();
-    alert('빠른 문의가 접수되었습니다. 곧 연락드리겠습니다.');
-    e.target.reset();
+    sendLead('빠른 문의', new FormData(e.target)).then(ok => {
+      alert(ok ? '빠른 문의가 접수되었습니다. 곧 연락드리겠습니다.' : '전송에 실패했습니다. 전화로 문의해 주세요.');
+      if (ok) e.target.reset();
+    });
   });
 
   /* AI 상담 위젯 */
@@ -132,8 +143,10 @@
   }));
   $('#diagForm').addEventListener('submit', e => {
     e.preventDefault();
-    alert('무료 진단 신청이 접수되었습니다. 48시간 안에 리포트를 보내드리겠습니다.');
-    e.target.reset();
+    sendLead('무료 진단', new FormData(e.target)).then(ok => {
+      alert(ok ? '무료 진단 신청이 접수되었습니다. 48시간 안에 리포트를 보내드리겠습니다.' : '전송에 실패했습니다. 전화로 문의해 주세요.');
+      if (ok) e.target.reset();
+    });
   });
 })();
 
