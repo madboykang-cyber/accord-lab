@@ -1,9 +1,9 @@
-checklist.md
-context-notes.md
+cardnews/
+poster/
+make_cardnews.py
+make_poster.py
 form-receiver.gs
 사업계획.md
 마케팅실행가이드.md
-cardnews/
-make_cardnews.py
-poster/
-make_poster.py
+context-notes.md
+checklist.md
