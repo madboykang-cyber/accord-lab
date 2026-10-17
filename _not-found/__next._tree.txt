@@ -1,5 +1,5 @@
-:HL["/synapse-lab/_next/static/chunks/0-6te3qcf06lp.css","style"]
+:HL["/accord-lab/_next/static/chunks/0-6te3qcf06lp.css","style"]
 :HL["https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css","style",{"crossOrigin":"anonymous"}]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"CHwcstur8ZWSyZlVqSmZe","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"NgZgVWs7tAsFLpa4up7yg","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

@@ -1,4 +1,4 @@
-# 시냅스 랩 세로 포스터 컷 4장(1080x1350)을 홈페이지와 같은 Pretendard 글꼴·톤으로 생성한다. 출력: poster/cut-01~04.jpg
+# 어코드 랩 세로 포스터 컷 4장(1080x1350)을 홈페이지와 같은 Pretendard 글꼴·톤으로 생성한다. 출력: poster/cut-01~04.jpg
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import os
 W, H = 1080, 1350
@@ -6,7 +6,7 @@ FD = r"C:\Users\PC\클로드 코드\fonts"
 def f(size, w="ExtraBold"): return ImageFont.truetype(os.path.join(FD, f"Pretendard-{w}.otf"), size)
 INK = (11, 18, 32); YEL = (254, 229, 0); SKY = (147, 197, 253); WHITE = (255, 255, 255); MUTED = (170, 184, 220); GREEN = (52, 211, 153); BRAND = (37, 99, 235); INDIGO = (79, 70, 229)
 SYM = Image.open("../synapse-lab-next/public/symbol.png").convert("RGBA")
-HERO = Image.open("../synapse-lab-next/public/bg-hero.jpg").convert("RGB")
+HERO = Image.open("poster/bg-laptop.jpg").convert("RGB")
 SITE = Image.open("../synapse-lab-ad/assets/site-mobile.png").convert("RGB")
 
 def base(photo=True):
@@ -16,12 +16,12 @@ def base(photo=True):
         img.paste(ph, (0, 0))
         ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); od = ImageDraw.Draw(ov)
         for y in range(H):
-            a = int(120 + 120 * (y / H)); od.line([(0, y), (W, y)], fill=INK + (a,))
+            a = int(110 + 130 * (y / H)); od.line([(0, y), (W, y)], fill=INK + (a,))
         img = img.convert("RGBA"); img.alpha_composite(ov)
     else:
         img = img.convert("RGBA")
     g = Image.new("RGBA", (W, H), (0, 0, 0, 0)); gd = ImageDraw.Draw(g)
-    gd.ellipse([520, -300, 1400, 560], fill=INDIGO + (150,)); gd.ellipse([-340, 760, 520, 1620], fill=BRAND + (130,))
+    gd.ellipse([520, -300, 1400, 560], fill=INDIGO + (90,)); gd.ellipse([-340, 760, 520, 1620], fill=BRAND + (80,))
     img.alpha_composite(g.filter(ImageFilter.GaussianBlur(140)))
     return img
 
@@ -30,14 +30,13 @@ def header(img, d, idx):
     ImageDraw.Draw(m).rounded_rectangle([0, 0, 95, 95], 24, fill=255); tile.putalpha(m)
     w = 74; s = SYM.resize((w, int(SYM.height * w / SYM.width)), Image.LANCZOS)
     tile.alpha_composite(s, ((96 - w) // 2, (96 - s.height) // 2)); img.alpha_composite(tile, (80, 80))
-    d.text((196, 84), "SYNAPSE LAB", font=f(20, "SemiBold"), fill=(165, 180, 252))
-    d.text((196, 112), "시냅스 랩", font=f(34, "Black"), fill=WHITE)
+    d.text((196, 84), "ACCORD LAB", font=f(20, "SemiBold"), fill=(165, 180, 252))
+    d.text((196, 112), "어코드 랩", font=f(34, "Black"), fill=WHITE)
     d.text((W - 80, 102), f"{idx} / 4", font=f(22, "SemiBold"), fill=MUTED, anchor="ra")
 
-def footer(d):
-    d.rounded_rectangle([80, H - 166, W - 80, H - 88], 39, fill=YEL)
-    d.text((W // 2, H - 150), "대표 직통 전화 010-9286-7134", font=f(38, "Black"), fill=(17, 17, 17), anchor="ma")
-    d.text((W // 2, H - 64), "madboykang-cyber.github.io/synapse-lab", font=f(22, "Medium"), fill=MUTED, anchor="ma")
+def footer(d, H=H):
+    d.rounded_rectangle([80, H - 158, W - 80, H - 80], 39, fill=YEL)
+    d.text((W // 2, H - 142), "대표 직통 전화 010-9286-7134", font=f(38, "Black"), fill=(17, 17, 17), anchor="ma")
 
 def pill(d, x, y, s, size=24, bg=YEL, fg=(17, 17, 17), w="Bold"):
     tw = d.textlength(s, font=f(size, w)) + 52
@@ -67,7 +66,7 @@ d.text((80, 520), "사진과 소개 문구만 보내주세요.", font=f(32, "Med
 d.text((80, 566), "3일 안에 실제 링크로 1차 시안을 보여드립니다.", font=f(32, "Medium"), fill=(225, 232, 255))
 pill(d, 80, 650, "최초 후불제 · 시안 불만족 시 착수금 환불", 24)
 pill(d, 80, 724, "NO 템플릿 · 100% 맞춤형 코딩 제작", 24, bg=WHITE)
-phone(img, 580, 740, 420, 424, scroll_css=0)
+phone(img, 600, 700, 400, 440, scroll_css=118)
 d = ImageDraw.Draw(img)
 d.text((80, 840), "랜딩페이지", font=f(30, "SemiBold"), fill=MUTED); d.text((80, 880), "89,000원", font=f(62, "Black"), fill=SKY)
 d.text((80, 980), "올인원 프리미엄 홈페이지", font=f(30, "SemiBold"), fill=MUTED); d.text((80, 1020), "289,000원", font=f(62, "Black"), fill=SKY)
@@ -114,6 +113,21 @@ for i, s in enumerate(items):
     d.line([(88, y + 26), (97, y + 35), (110, y + 19)], fill=INK, width=4)
     d.text((128, y + 4), s, font=f(32, "SemiBold"), fill=WHITE)
 footer(d); img.convert("RGB").save("poster/cut-04.jpg", quality=92)
+
+# 5. 카카오 소식용 정사각(폰 목업 없음)
+SQ = 1080
+img = base(); img = img.crop((0, 0, W, SQ)) if False else img
+sq = Image.new("RGBA", (W, SQ)); sq.paste(img.crop((0, 120, W, 120 + SQ)), (0, 0)); img = sq; d = ImageDraw.Draw(img)
+tile = Image.new("RGBA", (96, 96), WHITE + (255,)); m = Image.new("L", (96, 96), 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, 95, 95], 24, fill=255); tile.putalpha(m)
+w = 74; s_ = SYM.resize((w, int(SYM.height * w / SYM.width)), Image.LANCZOS); tile.alpha_composite(s_, ((96 - w) // 2, (96 - s_.height) // 2)); img.alpha_composite(tile, (80, 70))
+d.text((196, 74), "ACCORD LAB", font=f(20, "SemiBold"), fill=(165, 180, 252)); d.text((196, 102), "어코드 랩", font=f(34, "Black"), fill=WHITE)
+d.text((80, 230), "사업·영업용 홈페이지,", font=f(70, "Black"), fill=WHITE); d.text((80, 316), "아직 없으세요?", font=f(70, "Black"), fill=YEL)
+d.text((80, 430), "사진과 소개 문구만 보내주세요. 3일 안에 1차 시안을 보여드립니다.", font=f(28, "Medium"), fill=(225, 232, 255))
+pill(d, 80, 500, "최초 후불제 · 시안 불만족 시 착수금 환불", 24); pill(d, 80, 574, "NO 템플릿 · 100% 맞춤형 코딩 제작 · +챗봇 기능", 24, bg=WHITE)
+d.text((80, 680), "랜딩페이지", font=f(26, "SemiBold"), fill=MUTED); d.text((80, 714), "89,000원", font=f(60, "Black"), fill=SKY)
+d.text((560, 680), "올인원 프리미엄 홈페이지", font=f(26, "SemiBold"), fill=MUTED); d.text((560, 714), "289,000원", font=f(60, "Black"), fill=SKY)
+d.text((80, 800), "고정가 · 추가 비용 0원 · 서버비 평생 0원 · 검색 등록 무료", font=f(26, "Bold"), fill=WHITE)
+footer(d, H=SQ); img.convert("RGB").save("poster/kakao-post-1080.jpg", quality=92)
 
 ims = [Image.open(f"poster/cut-0{i}.jpg").resize((360, 450)) for i in range(1, 5)]
 s = Image.new("RGB", (1440, 450)); [s.paste(im, (i * 360, 0)) for i, im in enumerate(ims)]; s.save("poster/_cuts.jpg", quality=80)
