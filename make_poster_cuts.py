@@ -69,7 +69,7 @@ pill(d, 80, 724, "NO 템플릿 · 100% 맞춤형 코딩 제작", 24, bg=WHITE)
 phone(img, 600, 700, 400, 440, scroll_css=118)
 d = ImageDraw.Draw(img)
 d.text((80, 840), "랜딩페이지", font=f(30, "SemiBold"), fill=MUTED); d.text((80, 880), "89,000원", font=f(62, "Black"), fill=SKY)
-d.text((80, 980), "올인원 프리미엄 홈페이지", font=f(30, "SemiBold"), fill=MUTED); d.text((80, 1020), "289,000원", font=f(62, "Black"), fill=SKY)
+d.text((80, 980), "올인원 프리미엄 홈페이지", font=f(30, "SemiBold"), fill=MUTED); d.text((80, 1020), "489,000원", font=f(62, "Black"), fill=SKY)
 d.text((80, 1110), "고정가 · 추가 비용 0원", font=f(26, "Bold"), fill=WHITE)
 footer(d); img.convert("RGB").save("poster/cut-01.jpg", quality=92)
 
@@ -77,7 +77,7 @@ footer(d); img.convert("RGB").save("poster/cut-01.jpg", quality=92)
 img = base(); d = ImageDraw.Draw(img); header(img, d, 2)
 d.text((80, 290), "고정가입니다.", font=f(80, "Black"), fill=WHITE)
 d.text((80, 386), "추가 비용 없습니다.", font=f(80, "Black"), fill=YEL)
-cards = [("TYPE A", "랜딩페이지", "89,000원", "광고 · 이벤트 · 신규 오픈용 원페이지", False), ("TYPE B · BEST", "올인원 프리미엄 홈페이지", "289,000원", "가게 · 회사 소개용 다중 섹션", True)]
+cards = [("TYPE A", "랜딩페이지", "89,000원", "광고 · 이벤트 · 신규 오픈용 원페이지", False), ("TYPE B · BEST", "올인원 프리미엄 홈페이지", "489,000원", "가게 · 회사 소개용 다중 섹션", True)]
 for i, (tag, name, price, desc, best) in enumerate(cards):
     y = 540 + i * 262
     d.rounded_rectangle([80, y, W - 80, y + 224], 30, fill=WHITE if not best else (238, 242, 255), outline=BRAND if best else None, width=4)
@@ -125,7 +125,7 @@ d.text((80, 230), "사업·영업용 홈페이지,", font=f(70, "Black"), fill=W
 d.text((80, 430), "사진과 소개 문구만 보내주세요. 3일 안에 1차 시안을 보여드립니다.", font=f(28, "Medium"), fill=(225, 232, 255))
 pill(d, 80, 500, "최초 후불제 · 시안 불만족 시 착수금 환불", 24); pill(d, 80, 574, "NO 템플릿 · 100% 맞춤형 코딩 제작 · +챗봇 기능", 24, bg=WHITE)
 d.text((80, 680), "랜딩페이지", font=f(26, "SemiBold"), fill=MUTED); d.text((80, 714), "89,000원", font=f(60, "Black"), fill=SKY)
-d.text((560, 680), "올인원 프리미엄 홈페이지", font=f(26, "SemiBold"), fill=MUTED); d.text((560, 714), "289,000원", font=f(60, "Black"), fill=SKY)
+d.text((560, 680), "올인원 프리미엄 홈페이지", font=f(26, "SemiBold"), fill=MUTED); d.text((560, 714), "489,000원", font=f(60, "Black"), fill=SKY)
 d.text((80, 800), "고정가 · 추가 비용 0원 · 서버비 평생 0원 · 검색 등록 무료", font=f(26, "Bold"), fill=WHITE)
 footer(d, H=SQ); img.convert("RGB").save("poster/kakao-post-1080.jpg", quality=92)
 
