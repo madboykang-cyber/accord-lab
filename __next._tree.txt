@@ -1,9 +1,9 @@
-:HL["/accord-lab/_next/static/chunks/2t3rygqgfo7x6.css","style"]
+:HL["/_next/static/chunks/2t3rygqgfo7x6.css","style"]
 :HL["https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css","style",{"crossOrigin":"anonymous"}]
-:HL["/accord-lab/bg-hero2.jpg","image"]
-:HL["/accord-lab/bg-code.jpg","image"]
-:HL["/accord-lab/bg-video.jpg","image"]
-:HL["/accord-lab/bg-dc.jpg","image"]
-:HL["/accord-lab/symbol.png","image"]
+:HL["/bg-hero2.jpg","image"]
+:HL["/bg-code.jpg","image"]
+:HL["/bg-video.jpg","image"]
+:HL["/bg-dc.jpg","image"]
+:HL["/symbol.png","image"]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"CR_w7F3ahh1hrCWiWALHz","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"PY7T6eRL19xaBy6mHlbdW","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
